@@ -26,6 +26,9 @@
 
     NSLog(@"%d", [self FibonacciSequenceIteration:input]);
     NSLog(@"%d", [self FibonacciSequenceRecursion:input]);
+    
+    // Swift 实现
+    // sequence(state: (0, 1)) { (state: inout (Int64, Int64)) -> Int64?  in defer {state = (state.1, state.0 + state.1)};return state.0 }.prefix(10).map { $0 }
 }
 
 - (int)FibonacciSequenceIteration:(int)input {
